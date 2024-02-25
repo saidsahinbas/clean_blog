@@ -6,7 +6,8 @@ app.listen(8080, () => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Merhaba');
+    const blog = { id: 1, title: "Blog title", description: "Blog description" }
+    res.send(blog);
     res.status(200);
-    
+
 })
