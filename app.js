@@ -38,8 +38,11 @@ app.post('/posts', async (req, res) => {
     res.redirect('/');
 })
 
-app.get('/post-detail', (req, res) => {
-    res.render('post');
+app.get('/post-detail/:id', async(req, res) => {
+    const post = await Post.findById(req.params.id);
+    res.render('post', {
+        post
+    });
 })
 
 const port = 8080;

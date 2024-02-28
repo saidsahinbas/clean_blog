@@ -2,7 +2,7 @@
 <body>
   <%- include('partials/_navigation') -%>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('/img/home-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -23,7 +23,7 @@
 
         <% for(let i = 0; i < posts.length; i++) { %>
         <div class="post-preview">
-          <a href="post-detail">
+          <a href="/post-detail/<%= posts[i]._id %>">
             <h2 class="post-title">
               <%= posts[i].title %>
             </h2>
