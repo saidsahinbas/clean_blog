@@ -67,7 +67,12 @@
       </div>
     </div>
   </article>
-
+  <div class="tm-bg-gray tm-share-box">
+    <div class="text-center">
+      <a href="/post/edit/<%= post._id %>" class="btn btn-primary p-0"><span>Update Post</span></a>	
+      <a href="/post/delete/<%= post._id %>?_method=DELETE" class="btn btn-danger p-0" onclick="return confirm('Do you want to delete post?')"><span>Delete Post</span></a>	
+    </div>							
+  </div>
   <hr>
 
   <!-- Footer -->
